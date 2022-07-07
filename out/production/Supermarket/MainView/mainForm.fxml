@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="550.0" prefWidth="800.0" style="-fx-background-color: #f5ebf4;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.mainFormController">
+   <children>
+      <Text layoutX="340.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="120.6708984375">
+         <font>
+            <Font name="Baskerville Old Face" size="22.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="325.0" layoutY="96.0">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/IMG_20220521_144850.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgCashier" fitHeight="80.0" fitWidth="80.0" layoutX="560.0" layoutY="323.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/cashier.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgAdministrator" fitHeight="80.0" fitWidth="80.0" layoutX="132.0" layoutY="323.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/manager.png" />
+         </image>
+      </ImageView>
+      <Separator layoutX="397.0" layoutY="283.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #1234;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d6cbd590" height="72.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="807.0" />
+      <Label layoutX="101.0" layoutY="440.0" text="Administrator">
+         <font>
+            <Font name="Serif Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbl" layoutX="562.0" layoutY="440.0" text="Cashier">
+         <font>
+            <Font name="Serif Bold" size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

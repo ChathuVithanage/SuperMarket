@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="650.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CustomerFormController">
+   <children>
+      <TabPane layoutX="-1.0" layoutY="66.0" prefHeight="585.0" prefWidth="1050.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Save Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="361.0" layoutY="58.0" text="Add New Customer" textFill="#55639a">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="21.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="736.0" layoutY="29.0" text="Customer Id      :" />
+                        <Label layoutX="420.0" layoutY="154.0" text="Customer Title     :" />
+                        <Label layoutX="420.0" layoutY="204.0" text="Customer Name  :" />
+                        <Label layoutX="421.0" layoutY="258.0" text="Address               :" />
+                        <Label layoutX="421.0" layoutY="304.0" text="City                      :" />
+                        <Label layoutX="421.0" layoutY="356.0" text="Province              :" />
+                        <Label layoutX="423.0" layoutY="408.0" text="Postal Code        :" />
+                        <TextField fx:id="txtName" layoutX="559.0" layoutY="199.0" onKeyReleased="#cusNameOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtAddress" layoutX="559.0" layoutY="253.0" onKeyReleased="#cusAddressOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtCity" layoutX="559.0" layoutY="299.0" onKeyReleased="#cusCityOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtPostalCode" layoutX="559.0" layoutY="403.0" onKeyReleased="#cusPostalCodeOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <Button fx:id="btnCustomerSave" layoutX="795.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="34.0" prefWidth="184.0" style="-fx-background-color: #c5d6de; -fx-background-radius: 10;" text="Save">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Button>
+                        <ImageView fitHeight="369.0" fitWidth="416.0" layoutY="181.0">
+                           <image>
+                              <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/Twitter%20Header%201500x500%20px%20(1).jpeg" />
+                           </image>
+                        </ImageView>
+                        <Label fx:id="lblCusId" layoutX="859.0" layoutY="29.0" prefHeight="21.0" prefWidth="104.0" />
+                        <ComboBox fx:id="cmbCusTitle" layoutX="559.0" layoutY="149.0" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 5;" />
+                        <ComboBox fx:id="cmbCusProvince" layoutX="559.0" layoutY="350.0" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 5;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Update Customer">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: white;">
+                     <children>
+                        <Label layoutX="58.0" layoutY="55.0" text="Customer Id  ">
+                           <font>
+                              <Font name="Arial Rounded MT Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="cmbUCustId" layoutX="162.0" layoutY="47.0" onAction="#cmbCustIdOnAction" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: #dee2e3; -fx-border-color: #1234; -fx-border-radius: 5;" />
+                        <Label layoutX="420.0" layoutY="53.0" text="Customer Title     :" />
+                        <Separator layoutX="374.0" layoutY="37.0" opacity="0.41" orientation="VERTICAL" prefHeight="318.0" prefWidth="5.0" style="-fx-background-color: black;" />
+                        <Label layoutX="420.0" layoutY="99.0" text="Customer Name  :" />
+                        <Label layoutX="421.0" layoutY="148.0" text="Address               :" />
+                        <Label layoutX="423.0" layoutY="196.0" text="City                      :" />
+                        <Label layoutX="423.0" layoutY="247.0" text="Province              :" />
+                        <Label layoutX="420.0" layoutY="298.0" text="Postal Code        :" />
+                        <TextField fx:id="txtUCustName" layoutX="561.0" layoutY="94.0" onKeyReleased="#cusUNameOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtUAddress" layoutX="561.0" layoutY="143.0" onKeyReleased="#cusUAddressOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtUCity" layoutX="561.0" layoutY="191.0" onKeyReleased="#cusUCityOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <TextField fx:id="txtUPostalCode" layoutX="561.0" layoutY="293.0" onKeyReleased="#cusUPostalCodeOnKeyReleased" prefHeight="26.0" prefWidth="300.0" />
+                        <Button fx:id="btnCustomerUpdate" layoutX="847.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnCustUpdateOnAction" prefHeight="38.0" prefWidth="166.0" style="-fx-background-color: #1234; -fx-background-radius: 8;" text="Update">
+                           <font>
+                              <Font name="MT Extra" size="17.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="250.0" fitWidth="257.0" layoutX="-1.0" layoutY="286.0">
+                           <image>
+                              <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/online-shop-supermarket-isometric-illustration-with-character-carrying-trolley-with-purchases_1284-63637.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="625.0" layoutY="390.0" mnemonicParsing="false" onAction="#btnCustDeleteOnAction" prefHeight="31.0" prefWidth="173.0" style="-fx-background-color: #1234; -fx-background-radius: 8;" text="Delete">
+                           <font>
+                              <Font name="MT Extra" size="17.0" />
+                           </font>
+                        </Button>
+                        <ComboBox fx:id="cmbUTitle" layoutX="562.0" layoutY="47.0" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 5;" />
+                        <ComboBox fx:id="cmbUProvince" layoutX="562.0" layoutY="241.0" prefHeight="31.0" prefWidth="300.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 5;" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Load All Customer">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tblCustomer" layoutX="72.0" layoutY="53.0" prefHeight="426.0" prefWidth="902.0">
+                          <columns>
+                            <TableColumn fx:id="colCusId" prefWidth="98.0" text="Customer Id" />
+                            <TableColumn fx:id="colCusTitle" prefWidth="72.0" text="Title" />
+                              <TableColumn fx:id="colCusName" prefWidth="125.0" text="Name" />
+                              <TableColumn fx:id="colCusAddress" prefWidth="141.0" text="Address" />
+                              <TableColumn fx:id="colCusCity" prefWidth="116.0" text="City" />
+                              <TableColumn fx:id="colCusProvince" prefWidth="196.0" text="Province" />
+                              <TableColumn fx:id="colCusPostalCode" prefWidth="153.0" text="Postal code" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator layoutX="387.0" layoutY="14.0" prefHeight="4.0" prefWidth="293.0" style="-fx-background-color: black;" />
+      <Label layoutX="433.0" layoutY="14.0" text="Manage Customer" textFill="#16618a">
+         <font>
+            <Font name="Bell MT Bold" size="25.0" />
+         </font>
+      </Label>
+      <Separator layoutX="387.0" layoutY="49.0" prefHeight="4.0" prefWidth="293.0" style="-fx-background-color: black;" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="997.0" layoutY="7.0" onMouseClicked="#navigateToBack">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/back.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="10.0" layoutY="7.0" onMouseClicked="#navigateToHome">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/home-button.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

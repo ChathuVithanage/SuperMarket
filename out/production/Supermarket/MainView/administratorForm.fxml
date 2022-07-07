@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.administratorController">
+   <children>
+      <Text layoutX="365.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="WELCOME" wrappingWidth="120.6708984375">
+         <font>
+            <Font name="Baskerville Old Face" size="22.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="190.0" fitWidth="190.0" layoutX="340.0" layoutY="80.0">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/IMG_20220521_144850.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="18.0" layoutY="25.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Separator layoutX="21.0" layoutY="24.0" prefHeight="2.0" prefWidth="809.0" style="-fx-background-color: black;" />
+      <Separator layoutX="827.0" layoutY="25.0" orientation="VERTICAL" prefHeight="290.0" prefWidth="6.0" style="-fx-background-color: black;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d0d1d3" height="161.0" layoutY="315.0" stroke="#d0d1d3" strokeType="INSIDE" width="850.0" />
+      <Label layoutX="369.0" layoutY="493.0" text="Administrator">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgItem" fitHeight="80.0" fitWidth="80.0" layoutX="129.0" layoutY="328.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/add-to-cart.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgReport" fitHeight="75.0" fitWidth="75.0" layoutX="613.0" layoutY="331.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/business-report.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="119.0" layoutY="440.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Manage Item" wrappingWidth="100.6708984375">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="604.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="System Report" wrappingWidth="120.67090384662151">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="14.0" layoutY="541.0" onMouseClicked="#navigateToHome">
+         <image>
+            <Image url="file:/D:/IdeaProjects/Supermarket/src/MainView/image/home-button.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
